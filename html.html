@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 - The Structure | Frontend 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-rocket-takeoff-fill me-2"></i>KM Productions
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">HTML</a></li>
+                    <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="js.html">JavaScript</a></li>
+                    <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary" href="index.html#features">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="hero text-center d-flex align-items-center" style="min-height: 60vh;">
+        <div class="container">
+            <div class="icon-lg text-primary mb-4" style="font-size: 4rem;"><i class="bi bi-filetype-html"></i></div>
+            <h1 class="display-4 fw-bold mb-3">HTML5: The Structure</h1>
+            <p class="lead text-muted mx-auto" style="max-width: 600px;">HyperText Markup Language is the backbone of
+                the web. It defines the meaning and structure of your content.</p>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 reveal delay-100">
+                    <h3>Semantic HTML</h3>
+                    <p>Using the right tag for the right job is crucial for accessibility and SEO. Learn why
+                        <code>&lt;article&gt;</code> is better than <code>&lt;div&gt;</code>.
+                    </p>
+                    <div class="bg-light p-3 rounded border">
+                        <code>
+                            &lt;header&gt;...&lt;/header&gt;<br>
+                            &lt;main&gt;<br>
+                            &nbsp;&nbsp;&lt;article&gt;...&lt;/article&gt;<br>
+                            &lt;/main&gt;<br>
+                            &lt;footer&gt;...&lt;/footer&gt;
+                        </code>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal delay-200">
+                    <h3>Modern Forms</h3>
+                    <p>HTML5 introduced powerful input types like date, email, and range that work natively without
+                        complex JavaScript.</p>
+                    <form class="p-4 border rounded shadow-sm bg-white">
+                        <div class="mb-3">
+                            <label class="form-label">Date Input</label>
+                            <input type="date" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Range Input</label>
+                            <input type="range" class="form-range">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row g-5 mt-4">
+                <div class="col-lg-6 reveal delay-300">
+                    <h3>Accessibility Matters</h3>
+                    <p>Web accessibility ensures that everyone, including people with disabilities, can use the web. Use
+                        semantic tags and ARIA roles.</p>
+                    <div class="bg-light p-3 rounded border">
+                        <code>
+                            &lt;img src="pic.jpg" alt="Description"&gt;<br>
+                            &lt;button aria-label="Close Menu"&gt;X&lt;/button&gt;
+                        </code>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal delay-400">
+                    <h3>Best Practices</h3>
+                    <p>Write clean, maintainable code. Indent properly, use comments, and keep your structure logical.
+                    </p>
+                    <ul class="list-group list-group-flush shadow-sm rounded">
+                        <li class="list-group-item"><i class="bi bi-check-circle text-success me-2"></i> Use lowercase
+                            tags</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle text-success me-2"></i> Quote attribute
+                            values</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle text-success me-2"></i> Close all
+                            elements</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-3">Frontend 2025</h5>
+                    <p class="text-white-50">Master HTML to build a strong foundation.</p>
+                </div>
+                <div class="col-lg-4 ms-auto">
+                    <h6 class="text-white mb-3">Connect</h6>
+                    <div class="d-flex gap-3 mb-3">
+                        <a href="#" class="text-white fs-5"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-secondary mt-5 pt-4 text-center text-muted">
+                <small>&copy; 2025 Exhibition Inc.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

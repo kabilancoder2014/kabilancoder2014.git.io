@@ -1,0 +1,16 @@
+{
+    "name": "Frontend 2025",
+    "short_name": "Frontend25",
+    "description": "Master Frontend Development with this offline guide.",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#7C3AED",
+    "icons": [
+        {
+            "src": "./icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ]
+}

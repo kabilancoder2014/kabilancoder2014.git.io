@@ -1,0 +1,114 @@
+/* Galactic Theme Background */
+body {
+    background: #0f172a;
+    /* Dark Blue/Slate */
+    background-image:
+        radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 3px),
+        radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 2px),
+        radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 3px);
+    background-size: 550px 550px, 350px 350px, 250px 250px;
+    background-position: 0 0, 40px 60px, 130px 270px;
+    color: #e2e8f0;
+}
+
+/* Navbar override for dark mode */
+.navbar {
+    background: rgba(15, 23, 42, 0.9) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-brand,
+.nav-link {
+    color: #e2e8f0 !important;
+}
+
+.nav-link.active {
+    color: #38bdf8 !important;
+    /* Cyan for active */
+}
+
+/* Header Override */
+.bg-light {
+    background: transparent !important;
+    color: #f8fafc !important;
+}
+
+.text-muted {
+    color: #94a3b8 !important;
+}
+
+/* Game Board Grid */
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-width: 600px;
+    perspective: 1000px;
+}
+
+/* Card Structure */
+.memory-card {
+    background-color: transparent;
+    border: none;
+    height: 120px;
+    cursor: pointer;
+    position: relative;
+    /* Preserve 3D style for flip effect */
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+/* Flip Action */
+.memory-card.flip {
+    transform: rotateY(180deg);
+    cursor: default;
+}
+
+/* Card Faces */
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    /* Hides the back when flipped */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Front Face (The Icon - Initially Hidden) */
+.front-face {
+    background: #1e293b;
+    /* Dark Slate 800 */
+    border: 2px solid #38bdf8;
+    /* Cyan Border */
+    transform: rotateY(180deg);
+    /* Start rotated so it's hidden */
+    font-size: 3rem;
+    color: #38bdf8;
+    /* Neon Cyan Icons */
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+}
+
+/* Back Face (The specific pattern/logo - Initially Visible) */
+.back-face {
+    background: linear-gradient(135deg, #312e81, #4c1d95);
+    /* Deep Indigo/Purple */
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 2rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 576px) {
+    .memory-card {
+        height: 80px;
+    }
+
+    .front-face {
+        font-size: 2rem;
+    }
+}
