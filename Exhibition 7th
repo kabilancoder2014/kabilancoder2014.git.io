@@ -1,0 +1,2094 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 - The Style | Frontend 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-rocket-takeoff-fill me-2"></i>KM Productions
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="js.html">JavaScript</a></li>
+                    <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary" href="index.html#features">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="hero text-center d-flex align-items-center" style="min-height: 60vh;">
+        <div class="container">
+            <div class="icon-lg text-primary mb-4" style="font-size: 4rem;"><i class="bi bi-filetype-css"></i></div>
+            <h1 class="display-4 fw-bold mb-3">CSS3: The Art</h1>
+            <p class="lead text-muted mx-auto" style="max-width: 600px;">Cascading Style Sheets bring life to the web.
+                Learn layout, animations, and responsive design.</p>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 reveal delay-100">
+                    <h3>Flexbox & Grid</h3>
+                    <p>Modern layouts are built with Flexbox for 1D alignments and CSS Grid for complex 2D structures.
+                        Say goodbye to float.</p>
+                    <div class="d-flex gap-2 p-3 bg-light rounded border mb-3">
+                        <div class="bg-primary text-white p-3 rounded">Flex 1</div>
+                        <div class="bg-secondary text-white p-3 rounded">Flex 2</div>
+                        <div class="bg-dark text-white p-3 rounded">Flex 3</div>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal delay-200">
+                    <h3>Animations</h3>
+                    <p>Create smooth transitions and keyframe animations to delight users without slowing down the
+                        browser.</p>
+                    <button class="btn btn-outline-primary w-100 py-3">
+                        Hover Me!
+                    </button>
+                    <p class="text-muted small mt-2 text-center">Simple scale transform on hover</p>
+                </div>
+            </div>
+            <div class="row g-5 mt-4">
+                <div class="col-lg-6 reveal delay-300">
+                    <h3>Responsive Design</h3>
+                    <p>Make your sites look great on any device using Media Queries. Adjust layouts based on screen
+                        width.</p>
+                    <div class="bg-dark text-white p-3 rounded">
+                        <code>
+                            @media (max-width: 768px) {<br>
+                            &nbsp;&nbsp;.container {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;flex-direction: column;<br>
+                            &nbsp;&nbsp;}<br>
+                            }
+                        </code>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal delay-400">
+                    <h3>Modern CSS</h3>
+                    <p>Leverage the power of CSS Variables (Custom Properties) for consistent theming and easier
+                        maintenance.</p>
+                    <div class="p-3 rounded border" style="background-color: var(--bs-indigo); color: white;">
+                        <p class="mb-0">I'm styled using CSS variables!</p>
+                        <small>background-color: var(--primary);</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-3">Frontend 2025</h5>
+                    <p class="text-white-50">Master CSS to make beautiful interfaces.</p>
+                </div>
+                <div class="col-lg-4 ms-auto">
+                    <h6 class="text-white mb-3">Connect</h6>
+                    <div class="d-flex gap-3 mb-3">
+                        <a href="#" class="text-white fs-5"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-secondary mt-5 pt-4 text-center text-muted">
+                <small>&copy; 2025 Exhibition Inc.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+:root{
+  --bg: #f7f7fb;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --muted: #6b7280;
+  --primary: #0d6efd;
+  --accent: #0b5ed7;
+  --accent-dark: rgba(0,0,0,0.7);
+  --navbar-h: 56px; /* height of the fixed navbar */
+  --hero-offset: 24px; /* extra space between navbar and hero content (increased to avoid overlap) */
+  --radius: 10px;
+}
+
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
+body{
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+/* Compact page layout */
+.box1{
+  /* Subtle background for a cleaner, professional look */
+  background: linear-gradient(135deg, rgba(11,94,223,0.06) 0%, rgba(13,202,240,0.04) 100%);
+  padding: 28px 20px;
+  color: var(--text);
+  text-shadow: none;
+  border-radius: 8px;
+}
+
+.box3{ padding-top: 45px; }
+
+.money{ font-family: Copperplate, Papyrus, fantasy; }
+
+/* Navbar brand sizing */
+.navbar-brand { font-weight: 600; font-size: 1.05rem; }
+
+/* Make navbar fully transparent so content shows through; keep a scrolled state */
+.navbar.fixed-top {
+  background-color: transparent; /* fully transparent base */
+  /* remove backdrop blur so underlying text/images remain sharp */
+  transition: background-color 180ms ease, box-shadow 180ms ease;
+}
+/* keep links visible over images */
+.navbar.fixed-top .nav-link, .navbar.fixed-top .navbar-brand { color: #fff !important; }
+
+/* When navbar overlaps hero: use dark background for contrast */
+.navbar.fixed-top.dark-over {
+  background-color: rgba(15,23,42,0.88);
+  box-shadow: 0 6px 14px rgba(2,6,23,0.08);
+}
+
+/* When navbar has crossed the hero: keep it transparent */
+.navbar.fixed-top.transparent-over {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Stronger dark overlay on hero while navbar overlaps it */
+.hero.overlay-dark::before {
+  /* lighter darkening while nav overlaps */
+  background: linear-gradient(180deg, rgba(2,6,23,0.44), rgba(2,6,23,0.44));
+}
+
+/* Ensure the navbar toggler (hamburger) is visible without navbar-dark */
+.navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' width='30' height='30'><path stroke='rgba(255,255,255,0.95)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+/* Make hero text more readable under a transparent navbar */
+.hero .display-5 {
+  text-shadow: 0 2px 8px rgba(2,6,23,0.12);
+}
+.hero .lead { text-shadow: 0 1px 6px rgba(2,6,23,0.08); }
+
+/* Hero overlay for better contrast */
+.hero { position: relative; overflow: hidden; }
+.hero::before {
+  content: '';
+  position: absolute; inset: 0; z-index: 0;
+  background: linear-gradient(180deg, rgba(2,6,23,0.12), rgba(2,6,23,0.08));
+}
+.hero .container { position: relative; z-index: 1; }
+
+/* Card polish */
+.card { border: 0; border-radius: var(--radius); }
+.card h5 { font-weight: 600; }
+.card .card-body { min-height: 120px; }
+.card:hover { transform: translateY(-4px); transition: transform 220ms cubic-bezier(.2,.9,.2,1); }
+
+/* Professional feature cards */
+.feature-card { overflow: hidden; border-radius: 10px; box-shadow: 0 6px 16px rgba(17,24,39,0.06); background: #fff; }
+.feature-card .card-body { display: flex; flex-direction: column; gap: 10px; height: 100%; padding: 16px; }
+.feature-card .feature-top { display: flex; gap: 12px; align-items: flex-start; }
+.feature-card .icon { width: 52px; height: 52px; flex: 0 0 52px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; font-size: 18px; box-shadow: none; background: rgba(13,110,253,0.06); color: var(--primary); }
+.feature-card .icon svg { width: 22px; height: 22px; }
+.feature-card h3 { margin: 0 0 4px 0; font-size: 1rem; color: #111827; }
+.feature-card .muted { color: #6b7280; }
+.feature-card ul { margin: 6px 0 0 1rem; padding: 0; color: #374151; }
+.feature-card .meta { display: flex; gap: 8px; align-items: center; font-size: 0.875rem; color: #6b7280; }
+.feature-card .meta .badge { background: rgba(17,24,39,0.04); color: #111827; border-radius: 999px; padding: 6px 8px; font-weight:600; }
+.feature-card .card-footer { background: transparent; border-top: 0; padding-top: 6px; margin-top: auto; }
+
+@media (max-width: 576px) {
+  .feature-card .icon { width:48px; height:48px; }
+}
+
+/* Buttons */
+.btn { border-radius: 8px; }
+
+/* Table renovation styles */
+.table-responsive { padding: 6px 0; }
+.table {
+  background: var(--surface);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.table td, .table th { padding: 14px 18px; vertical-align: middle; }
+.table thead th {
+  background: linear-gradient(90deg, #2b3440, #1f2937);
+  color: #fff;
+  border: 0;
+  font-weight: 600;
+}
+.table-striped > tbody > tr:nth-of-type(odd) { background-color: #fbfbfd; }
+.table-hover tbody tr:hover { background-color: #f1f5f9; }
+
+@media (min-width: 768px) {
+  .table-responsive { box-shadow: 0 6px 18px rgba(17,24,39,0.06); padding: 10px; border-radius: 12px; }
+}
+
+/* Back-to-top button moved here */
+#backToTop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1100;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.2);
+  transform: translateY(8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s ease, background 0.12s ease;
+}
+#backToTop.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+#backToTop:focus { outline: 3px solid rgba(255,255,255,0.18); }
+#backToTop:hover { background: rgba(0,0,0,0.85); transform: translateY(-4px); }
+
+/* Responsive tweaks */
+@media (max-width: 576px) { .box1 { padding: 28px 14px; } #backToTop { right: 12px; bottom: 12px; width:42px; height:42px; font-size:18px; } }
+
+.hero { min-height: 360px; }
+.hero .lead { color: rgba(255,255,255,0.95); }
+
+.container ul { padding-left: 1.1rem; }
+
+footer { margin-top: 36px; }
+
+/* Hero illustration animations */
+.hero-illustration { max-height: 300px; width: 100%; display: block; }
+.hero-illustration .bar { transform-origin: bottom; transform: scaleY(0); opacity: 0.98; }
+.hero-illustration .bar1 { animation: growBar 900ms cubic-bezier(.2,.9,.2,1) 200ms forwards; }
+.hero-illustration .bar2 { animation: growBar 1000ms cubic-bezier(.2,.9,.2,1) 350ms forwards; }
+.hero-illustration .bar3 { animation: growBar 1100ms cubic-bezier(.2,.9,.2,1) 500ms forwards; }
+
+.hero-illustration .coins .coin { transform-origin: center; opacity: 0; }
+.hero-illustration .coins .c1 { animation: riseCoin 2300ms ease-in-out 600ms infinite; }
+.hero-illustration .coins .c2 { animation: riseCoin 2400ms ease-in-out 900ms infinite; }
+.hero-illustration .coins .c3 { animation: riseCoin 2100ms ease-in-out 400ms infinite; }
+
+@keyframes growBar {
+  0% { transform: scaleY(0); opacity: 0.7; }
+  60% { transform: scaleY(1.05); opacity: 1; }
+  100% { transform: scaleY(1); opacity: 1; }
+}
+
+@keyframes riseCoin {
+  0% { transform: translateY(0) scale(0.9); opacity: 0; }
+  10% { opacity: 1; }
+  50% { transform: translateY(-42px) scale(1.05); opacity: 1; }
+  90% { opacity: 0.6; }
+  100% { transform: translateY(-80px) scale(0.9); opacity: 0; }
+}
+
+/* Carousel specific adjustments */
+.hero-carousel .carousel-inner { min-height: 300px; height: 100%; }
+.hero-carousel .carousel-item img { object-fit: cover; height: 100%; }
+.hero-carousel .carousel-caption { background: linear-gradient(180deg, rgba(2,6,23,0.0), rgba(2,6,23,0.45)); left: 0; right: auto; padding: 1rem; border-radius: 6px; }
+.hero-carousel .carousel-caption h5 { color: #fff; font-weight:700; }
+.hero-carousel .carousel-caption p { color:#f1f5f9; }
+
+/* Hero carousel as full-bleed background */
+.hero.position-relative { overflow: hidden; }
+.hero.position-relative .hero-carousel { inset: 0; }
+.hero.position-relative .carousel-inner { position: absolute; inset: 0; }
+.hero.position-relative .carousel-item { background-size: cover; background-position: center; height: 100%; }
+.hero.position-relative .carousel-control-prev, .hero.position-relative .carousel-control-next { filter: drop-shadow(0 4px 12px rgba(2,6,23,0.18)); }
+
+      /* UI improvements added */
+      /* ensure content is visible under fixed navbar */
+      body {
+        /* remove global top padding; hero will position itself under the navbar */
+        padding-top: 0;
+        background: #f7f7fb;
+      }
+
+      .box1{
+        /* reduced padding and neutral styles for consistency */
+        padding: 28px 20px;
+        background-size: cover;
+        background-position: center;
+        color: var(--text);
+        text-shadow: none;
+      }
+
+/* Pull the hero up so the carousel sits flush under the fixed navbar. 
+   We use negative margin equal to navbar height and add matching top padding
+   so content (if any) inside the hero isn't hidden behind the bar. */
+.hero {
+  /* Pull hero up underneath the fixed navbar but do not add extra offset padding */
+  margin-top: calc(-1 * var(--navbar-h));
+  /* only reserve the navbar height so content aligns flush under it */
+  padding-top: var(--navbar-h);
+}
+
+@media (max-width: 576px) {
+  /* Keep same behavior on small screens using the navbar height variable */
+  .hero { margin-top: calc(-1 * var(--navbar-h)); padding-top: var(--navbar-h); }
+}
+
+      .box1 h1 { margin-top: 0; }
+
+      .card {
+        border: 0;
+        border-radius: 10px;
+        box-shadow: 0 6px 18px rgba(17,24,39,0.08);
+      }
+
+      .card .card-body p { color: #333; }
+
+      .card-img-top { max-width: 100%; height: auto; border-radius: 6px; }
+
+      .table {
+        background: #fff;
+        border-radius: 8px;
+      }
+
+      .signature { color: #6b7280; font-style: italic; margin: 18px 0; }
+
+      /* Back-to-top tweaks (complements inline styles) */
+      #backToTop { transition: transform 0.18s ease, background 0.18s ease; }
+      #backToTop.show { transform: translateY(0); }
+      #backToTop:hover { background: rgba(0,0,0,0.85); transform: translateY(-3px); }
+
+      /* Responsive adjustments */
+      @media (max-width: 576px) {
+        .box1 { padding: 36px 16px; }
+      }
+
+      /* Table renovation styles */
+      .table-responsive { padding: 6px 0; }
+      .table {
+        background: #ffffff;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .table td, .table th { padding: 14px 18px; vertical-align: middle; }
+      .table thead th {
+        background: linear-gradient(90deg, #2b3440, #1f2937);
+        color: #fff;
+        border: 0;
+        font-weight: 600;
+      }
+      .table-striped > tbody > tr:nth-of-type(odd) {
+        background-color: #fbfbfd;
+      }
+      .table-hover tbody tr:hover { background-color: #f1f5f9; }
+
+      /* Make table look like a card on larger screens */
+      @media (min-width: 768px) {
+        .table-responsive { box-shadow: 0 6px 18px rgba(17,24,39,0.06); padding: 10px; border-radius: 12px; }
+      }
+
+      /* HERO styles */
+      .hero {
+        background-image: url('images/money4.jpg');
+        background-size: cover;
+        background-position: center;
+        min-height: 320px;
+      }
+      .hero .lead { color: rgba(255,255,255,0.95); }
+
+      /* small utility for lists in the resources section */
+      .container ul { padding-left: 1.1rem; }
+
+      /* make sure footer spacing is comfortable */
+      footer { margin-top: 36px; }
+
+
+/* Galactic Theme Background */
+body {
+    background: #0f172a;
+    /* Dark Blue/Slate */
+    background-image:
+        radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 3px),
+        radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 2px),
+        radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 3px);
+    background-size: 550px 550px, 350px 350px, 250px 250px;
+    background-position: 0 0, 40px 60px, 130px 270px;
+    color: #e2e8f0;
+}
+
+/* Navbar override for dark mode */
+.navbar {
+    background: rgba(15, 23, 42, 0.9) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-brand,
+.nav-link {
+    color: #e2e8f0 !important;
+}
+
+.nav-link.active {
+    color: #38bdf8 !important;
+    /* Cyan for active */
+}
+
+/* Header Override */
+.bg-light {
+    background: transparent !important;
+    color: #f8fafc !important;
+}
+
+.text-muted {
+    color: #94a3b8 !important;
+}
+
+/* Game Board Grid */
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-width: 600px;
+    perspective: 1000px;
+}
+
+/* Card Structure */
+.memory-card {
+    background-color: transparent;
+    border: none;
+    height: 120px;
+    cursor: pointer;
+    position: relative;
+    /* Preserve 3D style for flip effect */
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+/* Flip Action */
+.memory-card.flip {
+    transform: rotateY(180deg);
+    cursor: default;
+}
+
+/* Card Faces */
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    /* Hides the back when flipped */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Front Face (The Icon - Initially Hidden) */
+.front-face {
+    background: #1e293b;
+    /* Dark Slate 800 */
+    border: 2px solid #38bdf8;
+    /* Cyan Border */
+    transform: rotateY(180deg);
+    /* Start rotated so it's hidden */
+    font-size: 3rem;
+    color: #38bdf8;
+    /* Neon Cyan Icons */
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+}
+
+/* Back Face (The specific pattern/logo - Initially Visible) */
+.back-face {
+    background: linear-gradient(135deg, #312e81, #4c1d95);
+    /* Deep Indigo/Purple */
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 2rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 576px) {
+    .memory-card {
+        height: 80px;
+    }
+
+    .front-face {
+        font-size: 2rem;
+    }
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games | Frontend 2025</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="games.css">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top"
+        style="background: rgba(255, 255, 255, 0.95); box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-rocket-takeoff-fill me-2"></i>KM Productions
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
+                    <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="js.html">JavaScript</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="games.html">Games</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="py-5 mt-5 bg-light text-center">
+        <div class="container pt-5">
+            <h1 class="display-4 fw-bold">Galactic Explorer</h1>
+            <p class="lead text-muted mx-auto" style="max-width: 600px;">Embark on a memory mission across the universe.
+                Match the celestial bodies and spacecraft to win!</p>
+        </div>
+    </section>
+
+    <!-- Game Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4 max-w-game mx-auto"
+                style="max-width: 600px;">
+                <div class="h5 mb-0">Moves: <span id="move-count">0</span></div>
+                <button id="restart-btn" class="btn btn-primary d-flex align-items-center gap-2">
+                    <i class="bi bi-arrow-counterclockwise"></i> Restart
+                </button>
+            </div>
+
+            <div class="game-container mx-auto" id="game-board">
+                <!-- Cards will be injected here by JS -->
+            </div>
+
+            <div id="win-message" class="text-center mt-4 d-none">
+                <h2 class="text-success fw-bold">Mission Accomplished! 🚀</h2>
+                <p>You have successfully explored the galaxy!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-auto">
+        <div class="container">
+            <div class="border-top border-secondary mt-5 pt-4 text-center text-muted pb-4">
+                <small>&copy; 2025 Exhibition Inc. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    <script src="games.js"></script>
+</body>
+
+</html>
+const cardsData = [
+    { name: 'rocket', icon: 'bi-rocket-takeoff-fill' },
+    { name: 'moon', icon: 'bi-moon-stars-fill' },
+    { name: 'sun', icon: 'bi-sun-fill' },
+    { name: 'star', icon: 'bi-stars' },
+    { name: 'globe', icon: 'bi-globe-americas' },
+    { name: 'cloud', icon: 'bi-cloud-lightning-fill' },
+    { name: 'lightning', icon: 'bi-lightning-charge-fill' },
+    { name: 'satellite', icon: 'bi-broadcast' }
+];
+
+
+const gameBoard = document.getElementById('game-board');
+const moveCountEl = document.getElementById('move-count');
+const restartBtn = document.getElementById('restart-btn');
+const winMessage = document.getElementById('win-message');
+
+let cards = [];
+let hasFlippedCard = false;
+let lockBoard = false;
+let firstCard, secondCard;
+let moves = 0;
+let matchesFound = 0;
+
+function initGame() {
+    // Reset state
+    gameBoard.innerHTML = '';
+    moves = 0;
+    matchesFound = 0;
+    hasFlippedCard = false;
+    lockBoard = false;
+    firstCard = null;
+    secondCard = null;
+    moveCountEl.textContent = moves;
+    winMessage.classList.add('d-none');
+
+    // Duplicate and Shuffle
+    const doubleCards = [...cardsData, ...cardsData];
+    doubleCards.sort(() => 0.5 - Math.random());
+
+    // Generate HTML
+    doubleCards.forEach(card => {
+        const cardElement = document.createElement('div');
+        cardElement.classList.add('memory-card');
+        cardElement.dataset.name = card.name;
+
+        cardElement.innerHTML = `
+            <div class="front-face">
+                <i class="bi ${card.icon}"></i>
+            </div>
+            <div class="back-face">
+            </div>
+        `;
+
+        cardElement.addEventListener('click', flipCard);
+        gameBoard.appendChild(cardElement);
+    });
+}
+
+function flipCard() {
+    if (lockBoard) return;
+    if (this === firstCard) return;
+
+    this.classList.add('flip');
+
+    if (!hasFlippedCard) {
+        // First click
+        hasFlippedCard = true;
+        firstCard = this;
+        return;
+    }
+
+    // Second click
+    secondCard = this;
+    incrementMoves();
+    checkForMatch();
+}
+
+function checkForMatch() {
+    let isMatch = firstCard.dataset.name === secondCard.dataset.name;
+
+    if (isMatch) {
+        disableCards();
+    } else {
+        unflipCards();
+    }
+}
+
+function disableCards() {
+    firstCard.removeEventListener('click', flipCard);
+    secondCard.removeEventListener('click', flipCard);
+
+    // Highlight match
+    firstCard.querySelector('.front-face').style.background = '#dcfce7';
+    firstCard.querySelector('.front-face').style.borderColor = '#22c55e';
+    secondCard.querySelector('.front-face').style.background = '#dcfce7';
+    secondCard.querySelector('.front-face').style.borderColor = '#22c55e';
+
+    resetBoard();
+    matchesFound++;
+    if (matchesFound === cardsData.length) {
+        setTimeout(() => {
+            winMessage.classList.remove('d-none');
+            // Optional: Confetti or success sound here
+        }, 500);
+    }
+}
+
+function unflipCards() {
+    lockBoard = true;
+
+    setTimeout(() => {
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
+        resetBoard();
+    }, 1000);
+}
+
+function resetBoard() {
+    [hasFlippedCard, lockBoard] = [false, false];
+    [firstCard, secondCard] = [null, null];
+}
+
+function incrementMoves() {
+    moves++;
+    moveCountEl.textContent = moves;
+}
+
+restartBtn.addEventListener('click', initGame);
+
+// Start game on load
+initGame();
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 - The Structure | Frontend 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-rocket-takeoff-fill me-2"></i>KM Productions
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">HTML</a></li>
+                    <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="js.html">JavaScript</a></li>
+                    <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary" href="index.html#features">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="hero text-center d-flex align-items-center" style="min-height: 60vh;">
+        <div class="container">
+            <div class="icon-lg text-primary mb-4" style="font-size: 4rem;"><i class="bi bi-filetype-html"></i></div>
+            <h1 class="display-4 fw-bold mb-3">HTML5: The Structure</h1>
+            <p class="lead text-muted mx-auto" style="max-width: 600px;">HyperText Markup Language is the backbone of
+                the web. It defines the meaning and structure of your content.</p>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 reveal delay-100">
+                    <h3>Semantic HTML</h3>
+                    <p>Using the right tag for the right job is crucial for accessibility and SEO. Learn why
+                        <code>&lt;article&gt;</code> is better than <code>&lt;div&gt;</code>.
+                    </p>
+                    <div class="bg-light p-3 rounded border">
+                        <code>
+                            &lt;header&gt;...&lt;/header&gt;<br>
+                            &lt;main&gt;<br>
+                            &nbsp;&nbsp;&lt;article&gt;...&lt;/article&gt;<br>
+                            &lt;/main&gt;<br>
+                            &lt;footer&gt;...&lt;/footer&gt;
+                        </code>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal delay-200">
+                    <h3>Modern Forms</h3>
+                    <p>HTML5 introduced powerful input types like date, email, and range that work natively without
+                        complex JavaScript.</p>
+                    <form class="p-4 border rounded shadow-sm bg-white">
+                        <div class="mb-3">
+                            <label class="form-label">Date Input</label>
+                            <input type="date" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Range Input</label>
+                            <input type="range" class="form-range">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row g-5 mt-4">
+                <div class="col-lg-6 reveal delay-300">
+                    <h3>Accessibility Matters</h3>
+                    <p>Web accessibility ensures that everyone, including people with disabilities, can use the web. Use
+                        semantic tags and ARIA roles.</p>
+                    <div class="bg-light p-3 rounded border">
+                        <code>
+                            &lt;img src="pic.jpg" alt="Description"&gt;<br>
+                            &lt;button aria-label="Close Menu"&gt;X&lt;/button&gt;
+                        </code>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal delay-400">
+                    <h3>Best Practices</h3>
+                    <p>Write clean, maintainable code. Indent properly, use comments, and keep your structure logical.
+                    </p>
+                    <ul class="list-group list-group-flush shadow-sm rounded">
+                        <li class="list-group-item"><i class="bi bi-check-circle text-success me-2"></i> Use lowercase
+                            tags</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle text-success me-2"></i> Quote attribute
+                            values</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle text-success me-2"></i> Close all
+                            elements</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-3">Frontend 2025</h5>
+                    <p class="text-white-50">Master HTML to build a strong foundation.</p>
+                </div>
+                <div class="col-lg-4 ms-auto">
+                    <h6 class="text-white mb-3">Connect</h6>
+                    <div class="d-flex gap-3 mb-3">
+                        <a href="#" class="text-white fs-5"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-secondary mt-5 pt-4 text-center text-muted">
+                <small>&copy; 2025 Exhibition Inc.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-rocket-takeoff-fill" viewBox="0 0 16 16">
+  <path d="M12.17 9.53c2.307-2.592 3.278-4.684 3.641-6.218.21-.887.214-1.58.16-2.065a3.6 3.6 0 0 0-.108-.563 2 2 0 0 0-.078-.23V.453c-.073-.164-.168-.234-.352-.295a2 2 0 0 0-.16-.045 4 4 0 0 0-.57-.093c-.49-.044-1.19-.03-2.08.188-1.536.374-3.618 1.343-6.161 3.604l-2.4.238h-.006a2.55 2.55 0 0 0-1.524.734L.15 7.17a.512.512 0 0 0 .433.868l1.896-.271c.28-.04.592.013.955.132.232.076.437.16.655.248l.203.083c.196.816.66 1.58 1.275 2.195.613.614 1.376 1.08 2.191 1.277l.082.202c.089.218.173.424.249.657.118.363.172.676.132.956l-.271 1.9a.512.512 0 0 0 .867.433l2.382-2.386c.41-.41.668-.949.732-1.526zm.11-3.699c-.797.8-1.93.961-2.528.362-.598-.6-.436-1.733.361-2.532.798-.799 1.93-.96 2.528-.361s.437 1.732-.36 2.531Z"/>
+  <path d="M5.205 10.787a7.6 7.6 0 0 0 1.804 1.352c-1.118 1.007-4.929 2.028-5.054 1.903-.126-.127.737-4.189 1.839-5.18.346.69.837 1.35 1.411 1.925"/>
+</svg>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earn with Frontend | 2025 Guide</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-rocket-takeoff-fill me-2"></i>KM Productions
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
+                    <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="js.html">JavaScript</a></li>
+                    <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary" href="#features">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center gy-5">
+                <div class="col-lg-6">
+                    <span class="badge bg-primary-subtle text-primary mb-3 px-3 py-2 rounded-pill">2025 Career
+                        Guide</span>
+                    <h1>Master Frontend Dev & <br>Earn Big in 2025.</h1>
+                    <p class="reveal delay-100">The ultimate guide to high-paying careers, freelance freedom, and
+                        building the future of the web.
+                        Start your journey to financial independence today.</p>
+                    <div class="d-flex gap-3 reveal delay-200">
+                        <a href="#tech-stack" class="btn btn-primary btn-lg">Start Learning</a>
+
+                    </div>
+                    <div class="mt-5 d-flex align-items-center gap-4 text-muted small">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check-circle-fill text-success"></i> High Demand
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check-circle-fill text-success"></i> Remote Work
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check-circle-fill text-success"></i> $100k+ Potential
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
+                        alt="Hero Image" class="img-fluid rounded-4 shadow-lg reveal delay-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="mb-3 reveal">Why Frontend Development?</h2>
+                <p class="text-muted mx-auto reveal delay-100" style="max-width: 600px;">Discover why becoming a
+                    frontend developer is
+                    one of the smartest financial moves you can make in 2025.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card reveal delay-100">
+                        <div class="feature-icon">
+                            <i class="bi bi-code-slash"></i>
+                        </div>
+                        <h4>High Demand Skills</h4>
+                        <p class="text-muted mb-0">Master React, Next.js, and AI integration. Companies are desperate
+                            for developers who can build modern interfaces.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card reveal delay-200">
+                        <div class="feature-icon">
+                            <i class="bi bi-globe"></i>
+                        </div>
+                        <h4>Remote Freedom</h4>
+                        <p class="text-muted mb-0">Work from anywhere in the world. Access global job markets and earn
+                            in strong currencies like USD and EUR.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card reveal delay-300">
+                        <div class="feature-icon">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+                        <h4>Lucrative Career</h4>
+                        <p class="text-muted mb-0">Entry-level salaries start high, and freelance rates can exceed
+                            $100/hr. The ceiling is up to you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech-stack" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="mb-3 reveal">Frontend Essentials</h2>
+                <p class="text-muted mx-auto reveal delay-100" style="max-width: 600px;">Master the core technologies
+                    that power the modern web.</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-6 col-md-4">
+                    <a href="html.html" class="text-decoration-none">
+                        <div class="tech-card reveal delay-100">
+                            <i class="bi bi-filetype-html tech-icon"></i>
+                            <h5 class="text-dark">HTML5</h5>
+                            <p class="text-muted small mt-2 mb-0">The structural backbone of the web. It defines the
+                                meaning and content of every page, from headings to data tables. Master the latest
+                                semantic tags for better accessibility.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4">
+                    <a href="css.html" class="text-decoration-none">
+                        <div class="tech-card reveal delay-200">
+                            <i class="bi bi-filetype-css tech-icon"></i>
+                            <h5 class="text-dark">CSS3</h5>
+                            <p class="text-muted small mt-2 mb-0">Styling, layout, and responsive design. Bring your
+                                pages to life with colors, animations, and modern grid systems. Learn to create layouts
+                                that work beautifully on any device.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4">
+                    <a href="js.html" class="text-decoration-none">
+                        <div class="tech-card reveal delay-300">
+                            <i class="bi bi-filetype-js tech-icon"></i>
+                            <h5 class="text-dark">JavaScript</h5>
+                            <p class="text-muted small mt-2 mb-0">Interactivity, logic, and modern features. Build
+                                dynamic applications that react to user input. From simple DOM manipulation to complex
+                                asynchronous logic, JavaScript does it all.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section Removed -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-3">Frontend 2025</h5>
+                    <p class="text-white-50">Empowering developers to achieve financial freedom through code.</p>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h6 class="text-white mb-3">Product</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Features</a></li>
+                        <li class="mb-2"><a href="#">Pricing</a></li>
+                        <li class="mb-2"><a href="#">Docs</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h6 class="text-white mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">About</a></li>
+                        <li class="mb-2"><a href="#">Blog</a></li>
+                        <li class="mb-2"><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="text-white mb-3">Connect</h6>
+                    <div class="d-flex gap-3 mb-3">
+                        <a href="#" class="text-white fs-5"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="bi bi-github"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
+                    </div>
+                    <p class="text-muted small mb-0">hello@frontend2025.com</p>
+                </div>
+
+            </div>
+            <div class="border-top border-secondary mt-5 pt-4 text-center text-muted">
+                <small>&copy; 2025 Exhibition Inc. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-primary rounded-circle shadow-lg" aria-label="Back to Top">
+        <i class="bi bi-rocket-fill"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - The Logic | Frontend 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-rocket-takeoff-fill me-2"></i>KM Productions
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
+                    <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="js.html">JavaScript</a></li>
+                    <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary" href="index.html#features">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="hero text-center d-flex align-items-center" style="min-height: 60vh;">
+        <div class="container">
+            <div class="icon-lg text-primary mb-4" style="font-size: 4rem;"><i class="bi bi-filetype-js"></i></div>
+            <h1 class="display-4 fw-bold mb-3">JavaScript: The Logic</h1>
+            <p class="lead text-muted mx-auto" style="max-width: 600px;">JavaScript powers the interactive web. From
+                simple DOM manipulation to complex React apps, it runs the show.</p>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 reveal delay-100">
+                    <h3>DOM Manipulation</h3>
+                    <p>Interact with HTML elements in real-time. Change text, styles, and classes instantly.</p>
+                    <div class="bg-white p-4 rounded shadow-sm border text-center">
+                        <p id="demoText" class="mb-3">Original Text</p>
+                        <button class="btn btn-sm btn-dark"
+                            onclick="document.getElementById('demoText').innerText = 'Text Changed via JS!';">Change
+                            Text</button>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal delay-200">
+                    <h3>Async Programming</h3>
+                    <p>Fetch data from APIs without blocking the UI using Promises and Async/Await.</p>
+                    <div class="bg-dark text-white p-3 rounded">
+                        <code>
+                            async function fetchData() {<br>
+                            &nbsp;&nbsp;const res = await fetch('/api');<br>
+                            &nbsp;&nbsp;const data = await res.json();<br>
+                            }
+                        </code>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5 mt-4">
+                <div class="col-lg-6 reveal delay-300">
+                    <h3>Modern ES6+</h3>
+                    <p>Write cleaner code with Arrow Functions, Destructuring, and Template Literals.</p>
+                    <div class="bg-light p-3 rounded border">
+                        <code>
+                            const greet = (name) => {<br>
+                            &nbsp;&nbsp;return `Hello, ${name}!`;<br>
+                            };
+                        </code>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal delay-400">
+                    <h3>Beyond Vanilla</h3>
+                    <p>Once you master the basics, explore powerful frameworks that power the industry.</p>
+                    <div class="d-flex gap-3 mt-3">
+                        <span class="badge bg-dark p-2">React</span>
+                        <span class="badge bg-success p-2">Vue</span>
+                        <span class="badge bg-danger p-2">Angular</span>
+                        <span class="badge bg-warning text-dark p-2">Svelte</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-3">Frontend 2025</h5>
+                    <p class="text-white-50">Master JavaScript to build real applications.</p>
+                </div>
+                <div class="col-lg-4 ms-auto">
+                    <h6 class="text-white mb-3">Connect</h6>
+                    <div class="d-flex gap-3 mb-3">
+                        <a href="#" class="text-white fs-5"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-secondary mt-5 pt-4 text-center text-muted">
+                <small>&copy; 2025 Exhibition Inc.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+{
+    "name": "Frontend 2025",
+    "short_name": "Frontend25",
+    "description": "Master Frontend Development with this offline guide.",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#7C3AED",
+    "icons": [
+        {
+            "src": "./icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ]
+}
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Navbar scroll effect
+const navbar = document.querySelector('.navbar');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add('shadow-sm');
+        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+    } else {
+        navbar.classList.remove('shadow-sm');
+        navbar.style.background = 'rgba(255, 255, 255, 0.8)';
+    }
+});
+
+
+
+// Back to Top Button
+const backToTopBtn = document.getElementById('backToTop');
+
+if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        // Trigger Launch Animation
+        backToTopBtn.classList.remove('show'); // Stop floating
+        backToTopBtn.classList.add('launch');
+
+        // Start scrolling up
+        smoothScrollToTop(1500);
+
+        // Reset button state after animation and scroll are done
+        setTimeout(() => {
+            backToTopBtn.classList.remove('launch');
+            // The scroll listener will handle adding 'show' back if needed, 
+            // but since we are at top, it will stay hidden.
+        }, 1500);
+    });
+}
+
+function smoothScrollToTop(duration) {
+    const startPosition = window.scrollY;
+    const startTime = performance.now();
+
+    function animation(currentTime) {
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+
+        // Easing function (easeOutCubic) for natural feel
+        const ease = 1 - Math.pow(1 - progress, 3);
+
+        window.scrollTo(0, startPosition * (1 - ease));
+
+        if (timeElapsed < duration) {
+            requestAnimationFrame(animation);
+        }
+    }
+
+
+    requestAnimationFrame(animation);
+}
+
+// Scroll Reveal Animations
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target); // Only animate once
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.reveal').forEach(el => {
+    observer.observe(el);
+});
+
+// Service Worker Registration
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js')
+            .then(registration => {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            })
+            .catch(err => {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+    });
+}
+
+const CACHE_NAME = 'frontend-2025-v4';
+const ASSETS_TO_CACHE = [
+    './',
+    './index.html',
+    './html.html',
+    './css.html',
+    './js.html',
+    './games.html',
+    './style.css',
+    './games.css',
+    './script.js',
+    './games.js',
+    './manifest.json',
+    './icon.svg',
+    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap',
+    'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css',
+    'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css',
+    'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js',
+    'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80'
+];
+
+self.addEventListener('install', (event) => {
+    event.waitUntil(
+        caches.open(CACHE_NAME)
+            .then((cache) => {
+                console.log('Opened cache');
+                return cache.addAll(ASSETS_TO_CACHE);
+            })
+    );
+});
+
+self.addEventListener('activate', (event) => {
+    event.waitUntil(
+        caches.keys().then((cacheNames) => {
+            return Promise.all(
+                cacheNames.map((cacheName) => {
+                    if (cacheName !== CACHE_NAME) {
+                        console.log('Deleting old cache:', cacheName);
+                        return caches.delete(cacheName);
+                    }
+                })
+            );
+        })
+    );
+});
+
+self.addEventListener('fetch', (event) => {
+    event.respondWith(
+        caches.match(event.request)
+            .then((response) => {
+                // Cache hit - return response
+                if (response) {
+                    return response;
+                }
+                return fetch(event.request).then(
+                    (response) => {
+                        // Check if we received a valid response
+                        // We also need to cache CORS responses (like Bootstrap CDN, Fonts, Unsplash)
+                        if (!response || response.status !== 200 || (response.type !== 'basic' && response.type !== 'cors')) {
+                            return response;
+                        }
+
+                        // IMPORTANT: Clone the response. A response is a stream
+                        // and because we want the browser to consume the response
+                        // as well as the cache consuming the response, we need
+                        // to clone it so we have two streams.
+                        var responseToCache = response.clone();
+
+                        caches.open(CACHE_NAME)
+                            .then((cache) => {
+                                cache.put(event.request, responseToCache);
+                            });
+
+                        return response;
+                    }
+                );
+            })
+    );
+});
+
+/* Modern Design System */
+:root {
+    --primary: #7C3AED;
+    /* Electric Violet */
+    --primary-dark: #6D28D9;
+    /* Darker Violet */
+    --secondary: #06B6D4;
+    /* Vibrant Cyan */
+    --dark: #0F172A;
+    /* Slate 900 */
+    --light: #F8FAFC;
+    /* Slate 50 */
+    --text: #334155;
+    /* Slate 700 */
+    --text-light: #94A3B8;
+    /* Slate 400 */
+    --surface: #ffffff;
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --radius: 12px;
+    --shadow: 0 10px 30px -10px rgba(124, 58, 237, 0.2);
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background-color: var(--light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--dark);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+/* Navbar */
+.navbar {
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    color: var(--primary) !important;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--text) !important;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--primary) !important;
+}
+
+/* W Effect Button Styles */
+/* W Effect Button Styles (Universal) */
+.btn:not(.navbar-toggler) {
+    padding: 0.75rem 1.75rem;
+    font-weight: 600;
+    border-radius: var(--radius);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Shine Effect on Hover (Universal) */
+.btn:not(.navbar-toggler)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    transition: all 0.6s ease-in-out;
+    z-index: -1;
+}
+
+.btn:not(.navbar-toggler):hover::after {
+    left: 100%;
+}
+
+.btn:not(.navbar-toggler):hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 20px -5px rgba(124, 58, 237, 0.5);
+}
+
+.btn:not(.navbar-toggler):active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 0 5px 10px -5px rgba(124, 58, 237, 0.4);
+}
+
+/* Button Colors */
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: white;
+}
+
+
+
+/* Hero Section */
+.hero {
+    padding: 8rem 0 5rem;
+    background: radial-gradient(circle at top right, rgba(124, 58, 237, 0.15), transparent 50%),
+        radial-gradient(circle at bottom left, rgba(6, 182, 212, 0.15), transparent 50%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, var(--dark), var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text);
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+/* Features */
+.feature-card {
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: var(--radius);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+    border-color: rgba(99, 102, 241, 0.2);
+}
+
+.feature-icon {
+    width: 3rem;
+    height: 3rem;
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--primary);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+    background: var(--dark);
+    color: var(--light);
+    padding: 4rem 0 2rem;
+}
+
+footer a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: var(--surface);
+}
+
+/* Back to Top Button */
+
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border: none;
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: translateY(100px);
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    animation: float 3s ease-in-out infinite;
+}
+
+#backToTop:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.6);
+}
+
+#backToTop:active {
+    transform: scale(0.95);
+}
+
+/* Rocket Launch Animation Class */
+#backToTop.launch {
+    animation: launch 1s ease-in-out forwards;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes launch {
+    0% {
+        transform: translateY(0) scale(1.1);
+        opacity: 1;
+    }
+
+    10% {
+        transform: translateY(20px) scale(0.9);
+        /* Compress before launch */
+    }
+
+    100% {
+        transform: translateY(-100vh) scale(0.5);
+        opacity: 0;
+    }
+}
+
+/* Scroll Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered delays */
+.reveal.delay-100 {
+    transition-delay: 0.1s;
+}
+
+.reveal.delay-200 {
+    transition-delay: 0.2s;
+}
+
+.reveal.delay-300 {
+    transition-delay: 0.3s;
+}
+
+/* Tech Stack Section */
+.tech-card {
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: var(--radius);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+    border-color: rgba(99, 102, 241, 0.2);
+}
+
+.tech-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Make Money with Web Development</title>
+
+    <!-- Google Poppins font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --bs-primary: #2563eb;
+            --accent: #0ea5a4;
+        }
+        body {
+            font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+        .hero {
+            background: linear-gradient(90deg, rgba(37,99,235,0.08), rgba(14,165,164,0.06));
+            border-radius: .75rem;
+            padding: 3rem 1.25rem;
+        }
+        .card-feature {
+            border: 0;
+            border-radius: .75rem;
+            box-shadow: 0 6px 20px rgba(15,23,42,0.06);
+        }
+        .badge-soft {
+            background: rgba(37,99,235,0.12);
+            color: var(--bs-primary);
+            font-weight: 600;
+            border-radius: .5rem;
+            padding: .25rem .5rem;
+            font-size: .78rem;
+        }
+        .footer {
+            font-size: .9rem;
+            color: #475569;
+        }
+        @media (min-width: 992px) {
+            .hero { padding: 4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden>
+                    <rect width="24" height="24" rx="6" fill="#2563EB"></rect>
+                    <path d="M7 12h10" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="fw-bold">DevIncome</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navMenu" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link active" href="#ways">Ways</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tips">Tips</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-lg-3" href="#contact">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <section class="hero mb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <span class="badge-soft">Web Dev • Income Strategies</span>
+                    <h1 class="mt-3 mb-3 display-6">How to Make Money with Web Development</h1>
+                    <p class="lead text-muted">Practical, proven ways for developers to earn — freelance, products, agencies, teaching, and more. Pick a path, validate quickly, and grow revenue predictably.</p>
+                    <div class="mt-4 d-flex gap-2">
+                        <a href="#ways" class="btn btn-primary">Explore Ways</a>
+                        <a href="#tips" class="btn btn-outline-secondary">Quick Tips</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center mt-4 mt-lg-0">
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=6c6d3f0e2b8a5c7a3d9c3e6a7f9a8c2b" alt="web dev" class="img-fluid rounded-3 shadow-sm">
+                </div>
+            </div>
+        </section>
+
+        <section id="ways" class="mb-5">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="h4 m-0">Major ways to earn</h2>
+                <small class="text-muted">Choose 1–2 to focus on first</small>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-feature p-3 h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Freelancing / Contracting</h5>
+                            <p class="card-text text-muted">Short-term projects and retainers. Great for immediate cash flow. Focus on niches and clear deliverables.</p>
+                            <ul class="mb-0 small">
+                                <li>Specialize (e.g., React, Shopify, performance)</li>
+                                <li>Use proposals + SOWs; ask for 30–50% upfront</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-feature p-3 h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">SaaS / Product</h5>
+                            <p class="card-text text-muted">Build a recurring-revenue product. Validate with a landing page and waitlist before building.</p>
+                            <ul class="mb-0 small">
+                                <li>MVP > early adopters > iterate</li>
+                                <li>Focus on retention and onboarding</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-feature p-3 h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Agency / Team</h5>
+                            <p class="card-text text-muted">Scale by hiring or partnering. Systems and sales become critical.</p>
+                            <ul class="mb-0 small">
+                                <li>Standardize offerings and pricing tiers</li>
+                                <li>Invest in project management and billing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-feature p-3 h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Themes / Templates / Components</h5>
+                            <p class="card-text text-muted">Sell reusable UI kits, templates, or components on marketplaces or your own store.</p>
+                            <ul class="mb-0 small">
+                                <li>Focus on quality, docs, and SEO</li>
+                                <li>Recurring updates and support boost sales</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-feature p-3 h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Teaching & Content</h5>
+                            <p class="card-text text-muted">Courses, paid newsletters, or workshops. Build authority and sell evergreen knowledge.</p>
+                            <ul class="mb-0 small">
+                                <li>Repurpose content across platforms</li>
+                                <li>Offer actionable projects to students</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-feature p-3 h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Open Source + Sponsorships</h5>
+                            <p class="card-text text-muted">Build OSS tools and accept sponsorships, donations, or offer paid support.</p>
+                            <ul class="mb-0 small">
+                                <li>Provide commercial support and integrations</li>
+                                <li>Offer licenses for enterprise features</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tips" class="mb-5">
+            <h2 class="h5 mb-3">Practical tips to get started</h2>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="p-3 bg-white rounded-3 shadow-sm">
+                        <h6>Validate before building</h6>
+                        <p class="small text-muted mb-0">Create a landing page, collect emails, and run ads or outreach. If people pay, build it.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-3 bg-white rounded-3 shadow-sm">
+                        <h6>Price confidently</h6>
+                        <p class="small text-muted mb-0">Charge for value, not time. Use packages to simplify buying decisions.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-3 bg-white rounded-3 shadow-sm">
+                        <h6>Automate repeatable work</h6>
+                        <p class="small text-muted mb-0">Create templates, scripts, and CI to deliver faster and increase margins.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-3 bg-white rounded-3 shadow-sm">
+                        <h6>Market consistently</h6>
+                        <p class="small text-muted mb-0">Content, case studies, referrals, and networks produce steady leads over time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources" class="mb-5">
+            <h2 class="h5 mb-3">Resources & tools</h2>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="bg-white p-3 rounded-3 shadow-sm">
+                        <strong>Proposals & Contracts</strong>
+                        <p class="small text-muted mb-0">Use templates (e.g., Bonsai, PandaDoc) and always include scope, timeline, and terms.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-white p-3 rounded-3 shadow-sm">
+                        <strong>Payment</strong>
+                        <p class="small text-muted mb-0">Stripe, Paddle, PayPal for payments; set up invoices and subscription billing.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-white p-3 rounded-3 shadow-sm">
+                        <strong>Hosting & Deploy</strong>
+                        <p class="small text-muted mb-0">Vercel, Netlify, and DigitalOcean handle hosting at scale; automate deploys with CI.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="mb-5">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <h3 class="h5">Ready to start?</h3>
+                    <p class="text-muted">Tell us your goal and timeframe. We'll suggest a clear first step to start generating revenue.</p>
+                    <ul class="list-unstyled small text-muted">
+                        <li>• Quick consults to find the best path</li>
+                        <li>• Templates to speed delivery</li>
+                        <li>• Training & onboarding for teams</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <form class="p-3 bg-white rounded-3 shadow-sm">
+                        <div class="mb-2">
+                            <label class="form-label small">Name</label>
+                            <input class="form-control" type="text" placeholder="Your name">
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label small">Email</label>
+                            <input class="form-control" type="email" placeholder="you@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small">Message</label>
+                            <textarea class="form-control" rows="3" placeholder="Project idea or question"></textarea>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-primary">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer class="mt-4 footer">
+            <div class="d-flex justify-content-between align-items-center py-3 border-top">
+                <div>© <strong>DevIncome</strong> <span class="text-muted">2025</span></div>
+                <div class="small text-muted">Built with Bootstrap • Poppins</div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
